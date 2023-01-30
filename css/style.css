@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* ! CSS Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', arial, sans-serif;
+	scroll-behavior: smooth;
+}
+li {
+	list-style: none;
+}
+section {
+	padding: 100px;
+	min-height: 100vh;
+}
+/* ! Area Navbar */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	padding: 40px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: .5s;
+	z-index: 1;
+}
+header.sticky {
+	background-color: #fff;
+	padding: 20px 100px;
+	box-shadow: 0 5px 20px rgba(0,0,0,.1);
+}
+header .brand {
+	color: #111;
+	font-size: 24px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 700;
+	letter-spacing: 2px;
+	border: none;
+	/*opacity: 0;*/
+}
+header ul {
+	position: relative;
+	display: flex;
+}
+header ul li {
+	position: relative;
+}
+header ul li a {
+	position: relative;
+	display: inline-block;
+	margin: 0 15px;
+	color: #111;
+	text-decoration: none;
+}
+header ul li.btn-active a::after,
+header ul li a:hover::after,
+header.sticky ul li a:hover::after {
+	content: '';
+	display: block;
+	border-bottom: 3px solid #2196f3;
+	width: 50%;
+	margin: auto;
+	padding-bottom: 5px;
+	margin-bottom: -8px;
+}
+/* ! Area Main Section */
+.banner {
+	position: relative;
+	width: 100%;
+	background: url(../img/nomad1.png) no-repeat;
+	background-color: #f1f2f6;
+	background-size: 600px 728px;
+	background-attachment: fixed;
+	background-position: right;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.banner .textBox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(100% - 500px);
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	padding: 100px;
+}
+.banner h2 {
+	font-size: 2rem;
+	color: #333;
+	font-weight: 500;
+	line-height: 1.5em;
+}
+.banner .textBox h2 .span1 {
+	/*color: #1fbcf6;*/
+	color: #2196f3;
+}
+.banner .textBox h2 .span2 {
+	font-size: 40px;
+	font-weight: 700;
+}
+.banner h3 {
+	font-size: 1.5em;
+	color: #333;
+	font-weight: 500;
+}
+/* * All Button */
+.btn {
+	position: relative;
+	background-image: url(../img/btn-bg2.png);
+	background-size: cover;
+	color: #fff;
+	margin-top: 15px;
+	padding: 10px 40px;
+	font-size: 18px;
+	font-weight: 600;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.btn:hover {
+	color: rgba(255,255,255,.7);
+}
+/* *  Main Icon */
+.textBox .icon {
+	position: absolute;
+	left: 100px;
+	bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*filter: invert(1);*/
+}
+.icon li {
+	margin-right: 20px;
+}
+.icon li img {
+	transform: scale(.7);
+	opacity: .7;
+}
+.icon li a.fab {
+	font-size: 30px;
+	opacity: .7;
+	color: #111;
+}
+.icon li img:hover, .icon li a.fab:hover {
+	opacity: 1;
+}
+/* ! Area About */
+.about {
+	position: relative;
+	width: 100%;
+	/*overflow: hidden;*/
+}
+/* * All Heading */
+.heading {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 30px;
+	color: #333;
+}
+.heading h2 {
+	font-weight: 600;
+	font-size: 30px;
+}
+.heading h2::after {
+	content: '';
+	display: block;
+	border-bottom: 3px solid #2196f3;
+	width: 20%;
+	margin: auto;
+	margin-bottom: 17px;
+}
+.content {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+.content .aboutBox {
+	margin-left: -115px;
+	display: flex;
+	/*justify-content: center;*/
+	/*align-items: center;*/
+	flex-direction: column;
+}
+.content .aboutBox h2 {
+	font-size: 27px;
+	color: #222;
+	/*margin-bottom: 10px;*/
+}
+.content .aboutBox h2 {
+	margin-top: 50px;
+}
+.content .aboutBox p {
+	text-align: justify;
+	font-size: 1.1rem;
+}
+.pict {
+	min-width: 50%;
+}
+.pict .img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: 100%;
+	border-bottom: 5px solid #222;
+	border-radius: 50%;
+	background-image: linear-gradient(to bottom, #fff 50%, #2196f3 100%);
+}
+/* * Area Skills */
+.skills {
+	background-color: #f1f2f6;
+}
+.content .skillBox {
+	width: 100%;
+	margin: 0 20px;
+}
+.content .skillBox h2 {
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+.content .skillBox p, .content .skillBox span {
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 1px;
+	font-size: 1.1rem;
+}
+.content .skillBox span {
+	float: right;
+	position: relative;
+	top: -25px;
+}
+.content .skillBox .skill {
+	background-color: #262626;
+	margin-bottom: 20px;
+	padding: 2px;
+	border-radius: 5px;
+}
+.content .skillBox .skill .skill-level {
+	background-color: #2196f3;
+	width: 100%;
+	height: 4px;
+	border-radius: 5px;
+}
+.slider-left, .slider-right {
+	opacity: 0;
+	transition: 1s;
+}
+.slider-left {
+	transform: translate(0, -50px) /*rotate(15deg)*/;
+}
+.slider-right {
+	transform: translate(0, 50px) /*rotate(-15deg)*/;
+}
+.slider-left.slider, .slider-right.slider {
+	opacity: 1;
+	transform: translate(0,0);
+}
+/* * Area Services */
+.services .content {
+	justify-content: center;
+	/*flex-direction: row;*/
+	flex-wrap: wrap;
+}
+.content .serviceBox {
+	padding: 40px 20px;
+	background-color: #f1f2f6;
+	min-width: 300px;
+	margin: 20px;
+	text-align: center;
+	transition: .3s;
+}
+.content .serviceBox:hover {
+	background-color: #666;
+	color: #fff;
+}
+.content .serviceBox img {
+	max-width: 80px;
+}
+.content .serviceBox:hover img {
+	filter: invert(1);
+}
+.content .serviceBox h2 {
+	font-size: 20px;
+	font-weight: 600;
+}
+/* * Area Exp */
+.exp {
+	background-color: #f1f2f6;
+}
+.exp .content {
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.content .expBox:not(.expBox:first-child) {
+	margin-top: 20px;
+}
+.content .expBox {
+	position: relative;
+	max-width: 300px;
+	padding-left: 20px;
+	border-left: 1px solid #111;
+}
+.content .expBox::before {
+	content: '';
+	position: absolute;
+	top: 15px;
+	left: -10px;
+	padding: 10px;
+	background-color: #333;
+	border-radius: 50%;
+}
+.content .expBox h2 {
+	font-size: 1.2rem;
+	padding-top: 10px;
+	color: #333;
+}
+.content .expBox h4 {
+	font-size: 1.1em;
+	color: #2196f3;
+}
+/* * Area Mini Box */
+.container {
+	position: relative;
+	top: -30px;
+	max-width: 300px;
+	margin: auto;
+	background-color: #fff;
+	box-shadow: 3px 3px 5px #666;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container .miniBox {
+	position: relative;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.container .miniBox h3 {
+	color: #3742fa;
+	font-size: 1.7em;
+}
+/* * Area Works */
+.work {
+	/*padding-top: 0;*/
+}
+.work .content {
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.content .workBox {
+	position: relative;
+	/*width: 50%;*/
+	/*padding: 20px;*/
+	margin: 20px;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	cursor: pointer;
+	transition: .5s;
+}
+.content .workBox .imgBox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.9);
+}
+.content .workBox .imgBox img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: 1s;
+}
+.content .workBox .imgBox img:hover {
+	transform: scale(1.1);
+}
+.content .thumbnail {
+	opacity: 0;
+	transform: translate(0, -40px);
+	transition: .5s;
+}
+.content .thumbnail.drop {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+/* * Area Contact */
+.contact {
+	background-color: #f1f2f6;
+}
+.content .formBox {
+	min-width: 60%;
+}
+.content .formBox form {
+	display: flex;
+	flex-direction: column;
+}
+.content .formBox form h3, .content .contactInfo h3 {
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+.content .formBox form input, .content .formBox textarea {
+	margin-bottom: 20px;
+	padding: 15px;
+	font-size: 16px;
+	/*background-color: transparent;*/
+	border: none;
+	outline: none;
+	resize: none;
+	background-color: #ffffff;
+}
+.content .formBox form textarea {
+	min-height: 150px;
+}
+.content .formBox form input::placeholder,
+.content .formBox form textarea::placeholder {
+	color: #333;
+}
+.content .formBox form input[type=submit] {
+	max-width: 100px;
+	background-color: rgba(33,150,243,1);
+	color: #fff;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+.content .formBox form input[type=submit]:hover {
+	background-color: rgba(33,150,243,.7);
+}
+.content .contactInfo {
+	min-width: 40%;
+}
+.content .contactInfo .iconBox {
+	position: relative;
+	padding: 20px 10px 20px 0;
+	display: flex;
+}
+.content .contactInfo .iconBox .icon {
+	min-width: 40px;
+	padding-top: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+}
+.content .contactInfo .iconBox .txtBox {
+	display: flex;
+	flex-direction: column;
+	margin-left: 20px;
+	font-size: 16px;
+	font-weight: 300;
+}
+.content .contactInfo .iconBox .txtBox h3 {
+	font-weight: 500;
+	color: #2196f3;
+	margin-bottom: 0;
+}
+/* * Area Footer */
+footer {
+	background-color: #222;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+}
+
+/* ! Responsive */
+@media screen and (max-width: 991px) {
+	/* ! All Section */
+	section {
+		padding: 100px 50px;
+	}
+	/* ! Area Navbar */
+	header, header.sticky {
+		background-color: #222;
+		padding: 20px 50px;
+	}
+	header .brand {
+		color: #fff;
+		opacity: 1;
+	}
+	header .menu {
+		position: fixed;
+		top: 75px;
+		left: -100%;
+		display: block;
+		padding: 100px 50px;
+		text-align: center;
+		width: 100%;
+		height: 100vh;
+		background-color: #fff;
+		transition: .5s;
+		border-top: 1px solid rgba(0,0,0,.2);
+		z-index: 10;
+	}
+	header .menu.active {
+		left: 0;
+	}
+	header ul li a {
+		color: #111;
+		font-size: 24px;
+		margin: 10px;
+	}
+	header ul li a:hover::after {
+		border: none;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	header ul li a:active {
+		color: #d44;
+	}
+	header .toggle {
+		width: 40px;
+		height: 40px;
+		background-image: url(../img/menu.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 30px;
+		color: #fff;
+		cursor: pointer;
+		transition: .2s;
+	}
+	header .toggle.active {
+		background-image: url(../img/close.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 25px;
+		color: #fff;
+		cursor: pointer;
+	}
+	/* ! Area Main */
+	.banner {
+		padding: 150px 50px 100px;
+	}
+	.banner .textBox {
+		width: 100%;
+		padding: 50px;
+	}
+	.banner .textBox h2 {
+		font-size: 1.7em;
+	}
+	.banner .textBox h3 {
+		font-size: 1em;
+	}
+	/* * Area About */
+	.content {
+		flex-direction: column;
+	}
+	.content .aboutBox {
+		margin-left: 0;
+	}
+	.content .aboutBox h2 {
+		font-size: 18px;
+	}
+	.content .aboutBox p {
+		font-size: 1rem;
+	}
+	.pict .img {
+		position: relative;
+	}
+	/* * Area Skills */
+	.content .skillBox {
+		margin: 0 20px 20px 0;
+	}
+}
+@media screen and (max-width: 600px) {
+	section {
+		padding: 100px 20px;
+	}
+	header, header.sticky {
+		padding: 20px 20px;
+	}
+	.banner {
+		background: none;
+		background-color: #cdcdcf;
+		padding: 150px 20px 100px;
+	}
+	.banner .textBox {
+		padding: 20px;
+	}
+	.banner .textBox h2 {
+		font-size: 1.3em;
+	}
+	.banner .textBox h3 {
+		font-size: 1.1em;
+	}
+	.banner .textBox h2 .span2 {
+		font-size: 27px;
+	}
+}
